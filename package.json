@@ -1,0 +1,64 @@
+{
+  "authors": [
+    "Cristi Constantin <cristi.constantin@live.com>"
+  ],
+  "bin": {
+    "clean-mark1": "./bin/clean-mark"
+  },
+  "bugs": {
+    "url": "https://github.com/croqaz/clean-mark/issues"
+  },
+  "dependencies": {
+    "a-extractor": "2.x",
+    "charset": "1.x",
+    "cheerio": "1.0.0-rc.9",
+    "chrono-node": "2.x",
+    "iconv-lite": "0.6.x",
+    "minimist": "1.x",
+    "minimize": "2.x",
+    "node-fetch": "2.x",
+    "sanitize-html": "2.x",
+    "turndown": "7.x",
+    "voca": "1.x"
+  },
+  "description": "Convert an article into a clean Markdown",
+  "devDependencies": {
+    "mocha": "6.x",
+    "prettier": "2.3.0",
+    "should": "13.x",
+    "standard": "16.0.3"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "keywords": [
+    "cli",
+    "clearly",
+    "readability",
+    "markdown"
+  ],
+  "license": "MIT",
+  "main": "lib/clean.js",
+  "name": "clean-mark",
+  "overrides": [
+    {
+      "files": "lib/*.js",
+      "options": {
+        "printWidth": 120,
+        "semi": false,
+        "singleQuote": true
+      }
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/croqaz/clean-mark.git"
+  },
+  "scripts": {
+    "fmt": "npx prettier --write ./lib/{*,*/}*.js && npx standard --fix ./lib/{*,*/}*.js",
+    "lint": "npx standard lib/**.js",
+    "start": "npx micro server.js",
+    "test": "npx mocha $(find . -name './test/*.test.js')"
+  },
+  "version": "0.8.1"
+}
